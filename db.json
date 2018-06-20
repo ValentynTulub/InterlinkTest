@@ -1,7 +1,34 @@
 {
-  "students":[
-    {"id": 1, "fullName": "Ivan V.", "grade": 80},
-    {"id": 2, "fullName": "John S.", "grade": 75},
-    {"id": 3, "fullName": "Victor A.", "grade": 93}
+  "students": [
+    {
+      "id": 1,
+      "fullName": "Ivan V.",
+      "grade": 80
+    },
+    {
+      "id": 2,
+      "fullName": "John S.",
+      "grade": 75
+    },
+    {
+      "id": 3,
+      "fullName": "Victor A.",
+      "grade": 93
+    },
+    {
+      "fullName": "Ihor B/",
+      "grade": "4",
+      "id": 4
+    },
+    {
+      "fullName": "Ihor B/",
+      "grade": "4",
+      "id": 5
+    },
+    {
+      "fullName": "Valik",
+      "grade": "90",
+      "id": 6
+    }
   ]
 }
