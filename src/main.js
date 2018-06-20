@@ -1,8 +1,13 @@
+let studentsURL = "http://localhost:3000/students";
+
+function loadStudents() {
+    getStudents().then(showStudents);
+}
+
+window.onload = loadStudents;
+
 function getStudents() {
-    return [
-        {fullName: "Ivan V.", grade: 80},
-        {fullName: "John S.", grade: 75}
-    ];
+    return fetch(studentsURL).then(r => r.json());
 }
 
 function showStudents(students) {
@@ -10,11 +15,10 @@ function showStudents(students) {
     let template = document.getElementById("template").content;
 
     studentsList.innerHTML = "";
-
     for (let student of students) {
         let studentTemplateClone = template.querySelector(".student").cloneNode(true);
-        updateStudentTemplate(studentTemplateClone, student);
 
+        updateStudentTemplate(studentTemplateClone, student);
         studentsList.appendChild(studentTemplateClone);
     }
 }
@@ -26,8 +30,5 @@ function updateStudentTemplate(template, student) {
     studentGrade.innerText = student.grade;
 }
 
-function loadStudents() {
-    showStudents(getStudents());
-}
 
-window.onload = loadStudents;
+
